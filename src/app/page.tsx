@@ -157,7 +157,7 @@ function NavLogo() {
       {/* Wordmark */}
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 12 }}>
         <span style={{
-          fontFamily: "'Cormorant Garamond', var(--font-serif), Georgia, serif",
+          fontFamily: "var(--font-serif)",
           fontWeight: 600,
           fontSize: 38,
           lineHeight: 0.8,
