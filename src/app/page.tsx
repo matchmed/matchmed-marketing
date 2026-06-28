@@ -158,8 +158,8 @@ function NavLogo() {
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 12 }}>
         <span style={{
           fontFamily: "var(--font-serif)",
-          fontWeight: 600,
-          fontSize: 38,
+          fontWeight: 400,
+          fontSize: 28,
           lineHeight: 0.8,
           color: '#1C4A45',
           letterSpacing: '-0.01em',
