@@ -1,14 +1,14 @@
-// src/app/layout.tsx
+// src/app/layout.tsx — updated with Cormorant Garamond added
 
 import type { Metadata } from 'next'
-import { DM_Serif_Display, Inter } from 'next/font/google'
+import { Cormorant_Garamond, Inter } from 'next/font/google'
 import './globals.css'
 
-const serif = DM_Serif_Display({
-  weight: ['400'],
+const display = Cormorant_Garamond({
+  weight: ['600'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
-  variable: '--font-serif',
+  variable: '--font-display',
   display: 'swap',
 })
 
@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${serif.variable} ${sans.variable}`}>
+    <html lang="en" className={`${display.variable} ${sans.variable}`}>
       <body>{children}</body>
     </html>
   )

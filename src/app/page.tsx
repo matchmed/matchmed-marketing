@@ -141,15 +141,50 @@ function Ticker() {
   )
 }
 
+function NavLogo() {
+  return (
+    <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 20 }}>
+      {/* Compass mark */}
+      <svg width="36" height="36" viewBox="0 0 100 100" fill="none" aria-label="Atlas compass mark">
+        <circle cx="50" cy="50" r="47" stroke="#1C4A45" strokeWidth="1.4"/>
+        <polygon points="50,8 57,43 92,50 57,57 50,92 43,57 8,50 43,43" fill="#1C4A45"/>
+        <circle cx="50" cy="50" r="4.4" fill="#F7F6F2"/>
+      </svg>
+
+      {/* Divider */}
+      <span style={{ width: 1, height: 32, background: 'rgba(20,18,16,0.12)', display: 'block' }} />
+
+      {/* Wordmark */}
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 12 }}>
+        <span style={{
+          fontFamily: "'Cormorant Garamond', var(--font-serif), Georgia, serif",
+          fontWeight: 600,
+          fontSize: 38,
+          lineHeight: 0.8,
+          color: '#1C4A45',
+          letterSpacing: '-0.01em',
+        }}>
+          Atlas
+        </span>
+        <span style={{
+          fontFamily: 'var(--font-sans)',
+          fontWeight: 500,
+          fontSize: 10,
+          letterSpacing: '0.32em',
+          textTransform: 'uppercase',
+          color: '#5E7A75',
+        }}>
+          by Matchmed
+        </span>
+      </div>
+    </Link>
+  )
+}
+
 function Nav() {
   return (
     <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.25rem 3rem', borderBottom: S.hairline }}>
-      <div style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: S.ink, letterSpacing: -0.3 }}>
-        Atlas
-        <sub style={{ fontFamily: 'var(--font-sans)', fontSize: 9, fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: S.mid, verticalAlign: 'sub', marginLeft: 3 }}>
-          by MatchMed
-        </sub>
-      </div>
+      <NavLogo />
       <div style={{ display: 'flex', alignItems: 'center', gap: '2.5rem' }}>
         {[['How it works', '#how-it-works'], ['Methodology', 'https://atlas.matchmed.app/scoring-methodology'], ['For programs', '#programs']].map(([label, href]) => (
           <Link key={label} href={href} style={{ fontSize: 13, color: S.mid, letterSpacing: '0.01em' }}>
