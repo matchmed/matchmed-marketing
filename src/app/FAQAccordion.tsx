@@ -37,7 +37,7 @@ export default function FAQAccordion() {
   const [open, setOpen] = useState<number | null>(null)
 
   return (
-    <section style={{ borderBottom: S.hairline }}>
+    <section id="faqs" style={{ borderBottom: S.hairline }}>
       <div style={{ padding: '4rem 3rem' }}>
         <div style={{ fontSize: 10, fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', color: S.mid, opacity: 0.7, marginBottom: '3rem' }}>
           Frequently asked questions

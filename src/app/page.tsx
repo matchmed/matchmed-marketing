@@ -186,7 +186,7 @@ function Nav() {
     <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.25rem 3rem', borderBottom: S.hairline }}>
       <NavLogo />
       <div style={{ display: 'flex', alignItems: 'center', gap: '2.5rem' }}>
-        {[['How it works', '#how-it-works'], ['Methodology', 'https://atlas.matchmed.app/scoring-methodology'], ['For programs', '#programs']].map(([label, href]) => (
+        {[['Features', '#features'], ['Testimonials', '#testimonials'], ['Process', '#how-it-works'], ['FAQs', '#faqs'], ['Methodology', '/methodology']].map(([label, href]) => (
           <Link key={label} href={href} style={{ fontSize: 13, color: S.mid, letterSpacing: '0.01em' }}>
             {label}
           </Link>
@@ -315,7 +315,7 @@ function FindingSection() {
 
 function FeaturesSection() {
   return (
-    <section style={{ borderBottom: S.hairline }}>
+    <section id="features" style={{ borderBottom: S.hairline }}>
       <div style={{ padding: S.sectionPad }}>
         <div style={{ ...S.label, marginBottom: '3rem' }}>What Atlas shows you</div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
