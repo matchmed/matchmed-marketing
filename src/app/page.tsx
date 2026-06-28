@@ -274,7 +274,7 @@ function FeaturesSection() {
 
 function HowItWorksSection() {
   return (
-    <section id="how-it-works" style={{ borderBottom: S.hairline }}>
+    <section id="how-it-works" style={{ borderBottom: S.hairline, background: '#EDEBE4' }}>
       <div className="landing-section-pad">
         <div style={{ ...S.label, marginBottom: '3rem' }}>How it works</div>
         <div className="landing-steps-grid">

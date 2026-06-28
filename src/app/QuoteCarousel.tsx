@@ -34,7 +34,7 @@ export default function QuoteCarousel() {
   const next = () => setCurrent((c) => (c + 1) % QUOTES.length)
 
   return (
-    <section id="testimonials" style={{ borderBottom: S.hairline, background: '#EDEBE4' }}>
+    <section id="testimonials" style={{ borderBottom: S.hairline }}>
       <div className="landing-quote-pad" style={{ padding: '3rem' }}>
         <div style={{ fontSize: 10, fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', color: S.mid, opacity: 0.7, marginBottom: '3rem' }}>
           What physicians say
