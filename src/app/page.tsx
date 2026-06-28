@@ -205,7 +205,7 @@ function InstitutionStrip() {
 
 function ProblemSection() {
   return (
-    <section style={{ borderBottom: S.hairline }}>
+    <section style={{ borderBottom: S.hairline, background: '#F7F6F2' }}>
       <div className="landing-section-pad">
         <div style={{ ...S.label, marginBottom: '3rem' }}>The problem</div>
         <div className="landing-problem-grid">
@@ -245,7 +245,7 @@ function FindingSection() {
 
 function FeaturesSection() {
   return (
-    <section id="features" style={{ borderBottom: S.hairline }}>
+    <section id="features" style={{ borderBottom: S.hairline, background: '#EDEBE4' }}>
       <div className="landing-section-pad">
         <div style={{ ...S.label, marginBottom: '3rem' }}>What Atlas shows you</div>
         <div className="landing-features-grid">
@@ -273,11 +273,12 @@ function FeaturesSection() {
 }
 
 function HowItWorksSection() {
+  const darkBorder = '1px solid rgba(255,255,255,0.1)'
   return (
-    <section id="how-it-works" style={{ borderBottom: S.hairline, background: '#EDEBE4' }}>
+    <section id="how-it-works" style={{ borderBottom: darkBorder, background: '#1C4A45' }}>
       <div className="landing-section-pad">
-        <div style={{ ...S.label, marginBottom: '3rem' }}>How it works</div>
-        <div className="landing-steps-grid">
+        <div style={{ ...S.label, marginBottom: '3rem', color: 'rgba(255,255,255,0.5)', opacity: 1 }}>How it works</div>
+        <div className="landing-steps-grid landing-steps-grid--dark">
           {HOW_STEPS.map((s, i) => (
             <div
               key={s.step}
@@ -286,12 +287,12 @@ function HowItWorksSection() {
                 padding: '2.5rem 0',
                 paddingRight: i < 2 ? '2rem' : 0,
                 paddingLeft:  i > 0 ? '2rem' : 0,
-                borderRight:  i < 2 ? S.hairline : undefined,
+                borderRight:  i < 2 ? darkBorder : undefined,
               }}
             >
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 13, color: S.mid, marginBottom: '1.25rem', opacity: 0.6 }}>{s.step}</div>
-              <div style={{ fontSize: 15, fontWeight: 500, color: S.ink, marginBottom: '0.6rem', letterSpacing: -0.2 }}>{s.title}</div>
-              <p style={{ fontSize: 13, color: S.mid, lineHeight: 1.7 }}>{s.body}</p>
+              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 13, color: 'rgba(255,255,255,0.5)', marginBottom: '1.25rem' }}>{s.step}</div>
+              <div style={{ fontSize: 15, fontWeight: 500, color: '#F7F6F2', marginBottom: '0.6rem', letterSpacing: -0.2 }}>{s.title}</div>
+              <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.65)', lineHeight: 1.7 }}>{s.body}</p>
             </div>
           ))}
         </div>

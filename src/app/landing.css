@@ -76,6 +76,10 @@
   border-top: 1px solid rgba(20, 18, 16, 0.10);
 }
 
+.landing-steps-grid--dark {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
 .landing-cta-inner {
   display: flex;
   align-items: center;
@@ -190,6 +194,10 @@
     padding-right: 0 !important;
     border-right: none !important;
     border-top: 1px solid rgba(20, 18, 16, 0.10);
+  }
+
+  .landing-steps-grid--dark .landing-step-cell {
+    border-top-color: rgba(255, 255, 255, 0.1);
   }
 
   .landing-cta-inner {
