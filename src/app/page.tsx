@@ -4,6 +4,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import QuoteCarousel from './QuoteCarousel'
 import FAQAccordion from './FAQAccordion'
+import Nav from './Nav'
+import './landing.css'
 
 export const metadata: Metadata = {
   title: 'Atlas by MatchMed — Ophthalmology Workforce Intelligence',
@@ -110,7 +112,6 @@ const S = {
   ink:        '#141210',
   mid:        '#8A8680',
   canvas:     '#F7F6F2',
-  sectionPad: '4rem 3rem' as const,
   label: {
     fontSize: 10, fontWeight: 500, letterSpacing: '0.12em',
     textTransform: 'uppercase' as const, color: '#8A8680', opacity: 0.7,
@@ -141,71 +142,10 @@ function Ticker() {
   )
 }
 
-function NavLogo() {
-  return (
-    <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 20 }}>
-      {/* Compass mark */}
-      <svg width="36" height="36" viewBox="0 0 100 100" fill="none" aria-label="Atlas compass mark">
-        <circle cx="50" cy="50" r="47" stroke="#1C4A45" strokeWidth="1.4"/>
-        <polygon points="50,8 57,43 92,50 57,57 50,92 43,57 8,50 43,43" fill="#1C4A45"/>
-        <circle cx="50" cy="50" r="4.4" fill="#F7F6F2"/>
-      </svg>
-
-      {/* Divider */}
-      <span style={{ width: 1, height: 32, background: 'rgba(20,18,16,0.12)', display: 'block' }} />
-
-      {/* Wordmark */}
-      <div style={{ display: 'flex', alignItems: 'baseline', gap: 12 }}>
-        <span style={{
-          fontFamily: "var(--font-serif)",
-          fontWeight: 400,
-          fontSize: 28,
-          lineHeight: 0.8,
-          color: '#1C4A45',
-          letterSpacing: '-0.01em',
-        }}>
-          Atlas
-        </span>
-        <span style={{
-          fontFamily: 'var(--font-sans)',
-          fontWeight: 500,
-          fontSize: 10,
-          letterSpacing: '0.32em',
-          textTransform: 'uppercase',
-          color: '#5E7A75',
-        }}>
-          by Matchmed
-        </span>
-      </div>
-    </Link>
-  )
-}
-
-function Nav() {
-  return (
-    <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.25rem 3rem', borderBottom: S.hairline }}>
-      <NavLogo />
-      <div style={{ display: 'flex', alignItems: 'center', gap: '2.5rem' }}>
-        {[['Features', '#features'], ['Testimonials', '#testimonials'], ['Process', '#how-it-works'], ['FAQs', '#faqs'], ['Methodology', '/methodology']].map(([label, href]) => (
-          <Link key={label} href={href} style={{ fontSize: 13, color: S.mid, letterSpacing: '0.01em' }}>
-            {label}
-          </Link>
-        ))}
-        <Link
-          href="https://atlas.matchmed.app"
-          style={{ fontSize: 13, fontWeight: 500, color: S.canvas, background: S.ink, borderRadius: 3, padding: '8px 18px' }}
-        >
-          Open Atlas
-        </Link>
-      </div>
-    </nav>
-  )
-}
-
 function Hero() {
   return (
     <section style={{ borderBottom: S.hairline }}>
-      <div style={{ padding: '5rem 3rem 4rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'end' }}>
+      <div className="landing-hero-pad landing-hero-grid">
         <div>
           <div style={{ fontSize: 11, fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: S.teal, marginBottom: '1.75rem', display: 'flex', alignItems: 'center', gap: 8 }}>
             <span style={{ display: 'block', width: 24, height: 1, background: S.teal }} />
@@ -219,7 +159,7 @@ function Hero() {
           <p style={{ fontSize: 16, color: S.mid, lineHeight: 1.7, maxWidth: 380, marginBottom: '2.5rem' }}>
             Eight years of Medicare data. 22,000+ physicians. The due diligence layer that should have existed when you were making this decision.
           </p>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+          <div className="landing-hero-actions">
             <Link href="https://atlas.matchmed.app/practices" style={{ fontSize: 14, fontWeight: 500, color: S.canvas, background: S.teal, borderRadius: 3, padding: '11px 24px' }}>
               Explore practices
             </Link>
@@ -234,7 +174,7 @@ function Hero() {
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           {HERO_STATS.map((stat, i) => (
             <div key={i} style={{ padding: '1.5rem 0', borderTop: S.hairline, ...(i === HERO_STATS.length - 1 ? { borderBottom: S.hairline } : {}) }}>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 44, fontWeight: 400, color: S.ink, letterSpacing: -1.5, lineHeight: 1, marginBottom: 4 }}>
+              <div className="landing-hero-stat-number" style={{ fontFamily: 'var(--font-serif)', fontSize: 44, fontWeight: 400, color: S.ink, letterSpacing: -1.5, lineHeight: 1, marginBottom: 4 }}>
                 {stat.number}
               </div>
               <div style={{ fontSize: 13, color: S.mid, lineHeight: 1.5, whiteSpace: 'pre-line' }}>
@@ -250,7 +190,7 @@ function Hero() {
 
 function InstitutionStrip() {
   return (
-    <div style={{ padding: '1rem 3rem', borderBottom: S.hairline, display: 'flex', alignItems: 'center', gap: '3rem', flexWrap: 'wrap' }}>
+    <div className="landing-institution-strip" style={{ borderBottom: S.hairline, display: 'flex', alignItems: 'center', gap: '3rem', flexWrap: 'wrap' }}>
       <span style={{ fontSize: 10, fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: S.mid, opacity: 0.6, whiteSpace: 'nowrap' }}>
         Used by physicians at
       </span>
@@ -266,9 +206,9 @@ function InstitutionStrip() {
 function ProblemSection() {
   return (
     <section style={{ borderBottom: S.hairline }}>
-      <div style={{ padding: '4rem 3rem' }}>
+      <div className="landing-section-pad">
         <div style={{ ...S.label, marginBottom: '3rem' }}>The problem</div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6rem', alignItems: 'start' }}>
+        <div className="landing-problem-grid">
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(28px, 3.5vw, 42px)', fontWeight: 400, lineHeight: 1.15, letterSpacing: -0.5 }}>
             You&apos;re making a<br />
             <em style={{ fontStyle: 'italic', color: S.teal }}>multi-year decision</em><br />
@@ -290,25 +230,14 @@ function FindingSection() {
   const darkBorder = '1px solid rgba(255,255,255,0.1)'
   return (
     <section style={{ borderBottom: darkBorder, background: '#1C4A45' }}>
-      <div style={{ padding: '4rem 3rem' }}>
+      <div className="landing-finding-pad landing-section-pad">
         <div style={{ ...S.label, marginBottom: '3rem', color: 'rgba(255,255,255,0.5)', opacity: 1 }}>A finding from the data</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(64px, 9vw, 110px)', fontWeight: 400, lineHeight: 0.9, letterSpacing: -4, color: '#F7F6F2' }}>
+        <div className="landing-finding-stat" style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(64px, 9vw, 110px)', fontWeight: 400, lineHeight: 0.9, letterSpacing: -4, color: '#F7F6F2' }}>
           23.6%
         </div>
         <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.65)', lineHeight: 1.65, maxWidth: 340, marginTop: '1.5rem' }}>
           of ophthalmologists graduating since 2016 have changed practices at least once. The rate is rising with each successive graduating class.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 1, background: 'rgba(255,255,255,0.1)', border: darkBorder, marginTop: '4rem' }}>
-        {[
-          { num: 'Rising',  label: 'Job-switching rate in each successive graduating class since 2016' },
-          { num: 'Zero',    label: 'Recruiters, surveys, or self-reported data involved in any score' },
-        ].map(({ num, label }) => (
-          <div key={num} style={{ background: 'rgba(255,255,255,0.07)', padding: '2rem 1.75rem' }}>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32, fontWeight: 400, color: '#F7F6F2', letterSpacing: -1 }}>{num}</div>
-            <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', marginTop: 8, lineHeight: 1.5 }}>{label}</div>
-          </div>
-        ))}
-        </div>
       </div>
     </section>
   )
@@ -316,13 +245,14 @@ function FindingSection() {
 
 function FeaturesSection() {
   return (
-    <section id="features" style={{ borderBottom: S.hairline, background: '#EDEBE4' }}>
-      <div style={{ padding: S.sectionPad }}>
+    <section id="features" style={{ borderBottom: S.hairline }}>
+      <div className="landing-section-pad">
         <div style={{ ...S.label, marginBottom: '3rem' }}>What Atlas shows you</div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+        <div className="landing-features-grid">
           {FEATURES.map((feat, i) => (
             <div
               key={feat.title}
+              className="landing-feature-cell"
               style={{
                 padding: '2.5rem 0',
                 borderTop: S.hairline,
@@ -345,12 +275,13 @@ function FeaturesSection() {
 function HowItWorksSection() {
   return (
     <section id="how-it-works" style={{ borderBottom: S.hairline }}>
-      <div style={{ padding: S.sectionPad }}>
+      <div className="landing-section-pad">
         <div style={{ ...S.label, marginBottom: '3rem' }}>How it works</div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', borderTop: S.hairline }}>
+        <div className="landing-steps-grid">
           {HOW_STEPS.map((s, i) => (
             <div
               key={s.step}
+              className="landing-step-cell"
               style={{
                 padding: '2.5rem 0',
                 paddingRight: i < 2 ? '2rem' : 0,
@@ -373,7 +304,7 @@ function CTASection() {
   const darkBorder = '1px solid rgba(255,255,255,0.1)'
   return (
     <section style={{ borderBottom: darkBorder, background: '#1C4A45' }}>
-      <div style={{ padding: S.sectionPad, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '4rem' }}>
+      <div className="landing-section-pad landing-cta-inner">
         <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 400, letterSpacing: -0.8, lineHeight: 1.1, maxWidth: 480, color: '#F7F6F2' }}>
           Start your search before<br />
           your first <em style={{ fontStyle: 'italic', color: '#9DB6B0' }}>site visit.</em>
@@ -393,13 +324,13 @@ function CTASection() {
 
 function Footer() {
   return (
-    <footer style={{ padding: '2rem 3rem', borderTop: S.hairline }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: 12, color: S.mid }}>
+    <footer className="landing-footer" style={{ borderTop: S.hairline }}>
+      <div className="landing-footer-inner" style={{ fontSize: 12, color: S.mid }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
           <span>Physician-founded. Data-driven. Built for Ophthalmology.</span>
           <span>© 2026 MatchMed LLC.</span>
         </div>
-        <div style={{ display: 'flex', gap: '2rem' }}>
+        <div className="landing-footer-links" style={{ display: 'flex', gap: '2rem' }}>
           <Link href="/methodology" style={{ color: S.mid }}>Methodology</Link>
           <Link href="/terms" style={{ color: S.mid }}>Terms</Link>
           <Link href="/privacy" style={{ color: S.mid }}>Privacy</Link>
@@ -414,7 +345,7 @@ function Footer() {
 
 export default function LandingPage() {
   return (
-    <div style={{ background: S.canvas, color: S.ink, fontFamily: 'var(--font-sans)', minHeight: '100vh' }}>
+    <div className="landing" style={{ background: S.canvas, color: S.ink, fontFamily: 'var(--font-sans)', minHeight: '100vh' }}>
       <Ticker />
       <Nav />
       <Hero />

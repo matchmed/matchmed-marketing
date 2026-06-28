@@ -40,7 +40,7 @@ const S = {
 export default function TermsPage() {
   return (
     <div style={{ background: S.canvas, minHeight: '100vh', fontFamily: 'var(--font-sans)' }}>
-      <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.25rem 3rem', borderBottom: S.hairline }}>
+      <nav className="subpage-nav" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.25rem 3rem', borderBottom: S.hairline }}>
         <Link href="/" style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: S.ink, letterSpacing: -0.3, textDecoration: 'none' }}>
           Atlas
         </Link>
@@ -49,7 +49,7 @@ export default function TermsPage() {
         </Link>
       </nav>
 
-      <div style={{ maxWidth: 720, margin: '0 auto', padding: '4rem 3rem 6rem' }}>
+      <div className="subpage-content" style={{ maxWidth: 720, margin: '0 auto', padding: '4rem 3rem 6rem' }}>
         <div style={{ fontSize: 10, fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', color: S.mid, marginBottom: '1.5rem' }}>
           MatchMed, LLC
         </div>

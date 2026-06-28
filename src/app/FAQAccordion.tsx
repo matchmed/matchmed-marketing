@@ -38,7 +38,7 @@ export default function FAQAccordion() {
 
   return (
     <section id="faqs" style={{ borderBottom: S.hairline, background: '#EDEBE4' }}>
-      <div style={{ padding: '4rem 3rem' }}>
+      <div className="landing-faq-pad" style={{ padding: '4rem 3rem' }}>
         <div style={{ fontSize: 10, fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', color: S.mid, opacity: 0.7, marginBottom: '3rem' }}>
           Frequently asked questions
         </div>

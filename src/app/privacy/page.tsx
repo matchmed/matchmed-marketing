@@ -27,7 +27,7 @@ export default function PrivacyPage() {
   return (
     <div style={{ background: '#F7F6F2', minHeight: '100vh', fontFamily: 'var(--font-sans)' }}>
       {/* Minimal nav */}
-      <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.25rem 3rem', borderBottom: '1px solid rgba(20,18,16,0.10)' }}>
+      <nav className="subpage-nav" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.25rem 3rem', borderBottom: '1px solid rgba(20,18,16,0.10)' }}>
         <Link href="/" style={{ fontFamily: 'var(--font-serif)', fontSize: 22, color: '#141210', letterSpacing: -0.3, textDecoration: 'none' }}>
           Atlas
         </Link>
@@ -36,7 +36,7 @@ export default function PrivacyPage() {
         </Link>
       </nav>
 
-      <div style={{ maxWidth: 720, margin: '0 auto', padding: '4rem 3rem 6rem' }}>
+      <div className="subpage-content" style={{ maxWidth: 720, margin: '0 auto', padding: '4rem 3rem 6rem' }}>
         {/* Header */}
         <div style={{ fontSize: 10, fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#8A8680', marginBottom: '1.5rem' }}>
           MatchMed, LLC
