@@ -287,24 +287,25 @@ function ProblemSection() {
 }
 
 function FindingSection() {
+  const darkBorder = '1px solid rgba(255,255,255,0.1)'
   return (
-    <section style={{ borderBottom: S.hairline }}>
+    <section style={{ borderBottom: darkBorder, background: '#1C4A45' }}>
       <div style={{ padding: '4rem 3rem' }}>
-        <div style={{ ...S.label, marginBottom: '3rem' }}>A finding from the data</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(64px, 9vw, 110px)', fontWeight: 400, lineHeight: 0.9, letterSpacing: -4, color: S.ink }}>
+        <div style={{ ...S.label, marginBottom: '3rem', color: 'rgba(255,255,255,0.5)', opacity: 1 }}>A finding from the data</div>
+        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(64px, 9vw, 110px)', fontWeight: 400, lineHeight: 0.9, letterSpacing: -4, color: '#F7F6F2' }}>
           23.6%
         </div>
-        <p style={{ fontSize: 14, color: S.mid, lineHeight: 1.65, maxWidth: 340, marginTop: '1.5rem' }}>
+        <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.65)', lineHeight: 1.65, maxWidth: 340, marginTop: '1.5rem' }}>
           of ophthalmologists graduating since 2016 have changed practices at least once. The rate is rising with each successive graduating class.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 1, background: 'rgba(20,18,16,0.10)', border: S.hairline, marginTop: '4rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 1, background: 'rgba(255,255,255,0.1)', border: darkBorder, marginTop: '4rem' }}>
         {[
           { num: 'Rising',  label: 'Job-switching rate in each successive graduating class since 2016' },
           { num: 'Zero',    label: 'Recruiters, surveys, or self-reported data involved in any score' },
         ].map(({ num, label }) => (
-          <div key={num} style={{ background: S.canvas, padding: '2rem 1.75rem' }}>
-            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32, fontWeight: 400, color: S.ink, letterSpacing: -1 }}>{num}</div>
-            <div style={{ fontSize: 13, color: S.mid, marginTop: 8, lineHeight: 1.5 }}>{label}</div>
+          <div key={num} style={{ background: 'rgba(255,255,255,0.07)', padding: '2rem 1.75rem' }}>
+            <div style={{ fontFamily: 'var(--font-serif)', fontSize: 32, fontWeight: 400, color: '#F7F6F2', letterSpacing: -1 }}>{num}</div>
+            <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', marginTop: 8, lineHeight: 1.5 }}>{label}</div>
           </div>
         ))}
         </div>
@@ -315,7 +316,7 @@ function FindingSection() {
 
 function FeaturesSection() {
   return (
-    <section id="features" style={{ borderBottom: S.hairline }}>
+    <section id="features" style={{ borderBottom: S.hairline, background: '#EDEBE4' }}>
       <div style={{ padding: S.sectionPad }}>
         <div style={{ ...S.label, marginBottom: '3rem' }}>What Atlas shows you</div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
@@ -369,18 +370,19 @@ function HowItWorksSection() {
 }
 
 function CTASection() {
+  const darkBorder = '1px solid rgba(255,255,255,0.1)'
   return (
-    <section style={{ borderBottom: S.hairline }}>
+    <section style={{ borderBottom: darkBorder, background: '#1C4A45' }}>
       <div style={{ padding: S.sectionPad, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '4rem' }}>
-        <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 400, letterSpacing: -0.8, lineHeight: 1.1, maxWidth: 480 }}>
+        <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 400, letterSpacing: -0.8, lineHeight: 1.1, maxWidth: 480, color: '#F7F6F2' }}>
           Start your search before<br />
-          your first <em style={{ fontStyle: 'italic', color: S.teal }}>site visit.</em>
+          your first <em style={{ fontStyle: 'italic', color: '#9DB6B0' }}>site visit.</em>
         </h2>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '1rem', flexShrink: 0 }}>
-          <Link href="https://atlas.matchmed.app/practices" style={{ fontSize: 15, fontWeight: 500, color: S.canvas, background: S.teal, borderRadius: 3, padding: '13px 28px' }}>
+          <Link href="https://atlas.matchmed.app/practices" style={{ fontSize: 15, fontWeight: 500, color: '#1C4A45', background: '#F7F6F2', borderRadius: 3, padding: '13px 28px' }}>
             Explore Atlas
           </Link>
-          <p style={{ fontSize: 12, color: S.mid, lineHeight: 1.6 }}>
+          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', lineHeight: 1.6 }}>
             Free to browse. No subscription required to view practice profiles.
           </p>
         </div>
