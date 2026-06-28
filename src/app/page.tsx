@@ -3,6 +3,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import QuoteCarousel from './QuoteCarousel'
+import FAQAccordion from './FAQAccordion'
 
 export const metadata: Metadata = {
   title: 'Atlas by MatchMed — Ophthalmology Workforce Intelligence',
@@ -386,6 +387,7 @@ export default function LandingPage() {
       <FeaturesSection />
       <QuoteCarousel />
       <HowItWorksSection />
+      <FAQAccordion />
       <CTASection />
       <Footer />
     </div>
