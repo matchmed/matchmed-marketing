@@ -160,7 +160,7 @@ function Hero() {
             Eight years of Medicare data. 22,000+ physicians. The due diligence layer that should have existed when you were making this decision.
           </p>
           <div className="landing-hero-actions">
-            <Link href="https://atlas.matchmed.app/practices" style={{ fontSize: 14, fontWeight: 500, color: S.canvas, background: S.teal, borderRadius: 3, padding: '11px 24px' }}>
+            <Link href="https://atlas.matchmed.app" style={{ fontSize: 14, fontWeight: 500, color: S.canvas, background: S.teal, borderRadius: 3, padding: '11px 24px' }}>
               Explore practices
             </Link>
             <Link href="#how-it-works" style={{ fontSize: 13, color: S.mid, display: 'flex', alignItems: 'center', gap: 6 }}>
@@ -311,7 +311,7 @@ function CTASection() {
           your first <em style={{ fontStyle: 'italic', color: '#9DB6B0' }}>site visit.</em>
         </h2>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '1rem', flexShrink: 0 }}>
-          <Link href="https://atlas.matchmed.app/practices" style={{ fontSize: 15, fontWeight: 500, color: '#1C4A45', background: '#F7F6F2', borderRadius: 3, padding: '13px 28px' }}>
+          <Link href="https://atlas.matchmed.app" style={{ fontSize: 15, fontWeight: 500, color: '#1C4A45', background: '#F7F6F2', borderRadius: 3, padding: '13px 28px' }}>
             Explore Atlas
           </Link>
           <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', lineHeight: 1.6 }}>
