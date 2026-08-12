@@ -1,0 +1,6 @@
+marketing desktop overflow=false
+counts=Tracking 6,700+ practices and 22,300+ ophthalmologists
+result samples: ["MARIETTA EYE CLINIC\nMARIETTA, GA · 10 locations"]
+mobile 320 overflow=false statsHidden=true
+mobile 390 overflow=false statsHidden=true
+atlas standalone title=Research a practice before you sign. results=6

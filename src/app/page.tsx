@@ -5,6 +5,7 @@ import Link from 'next/link'
 import QuoteCarousel from './QuoteCarousel'
 import FAQAccordion from './FAQAccordion'
 import Nav from './Nav'
+import PublicSearchCombobox from '@/components/PublicSearchCombobox'
 import './landing.css'
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ const TICKER_ITEMS = [
   { label: '23.6%',             value: 'of ophthalmologists graduating since 2016 have changed practices' },
   { label: '8+ years',          value: 'of longitudinal data across the US workforce' },
   { label: 'No recruiters',     value: 'no surveys, no self-reporting, just data' },
-  { label: 'Job-switching',     value: 'rising in each successive graduating class since 2016' },
+  { label: 'Search',            value: '6,700+ ophthalmology practices' },
   { label: 'Physician-founded', value: 'built by an ophthalmologist for ophthalmologists' },
 ]
 
@@ -156,14 +157,12 @@ function Hero() {
             before you <em style={{ fontStyle: 'italic', color: S.teal }}>commit</em><br />
             to it.
           </h1>
-          <p style={{ fontSize: 16, color: S.mid, lineHeight: 1.7, maxWidth: 380, marginBottom: '2.5rem' }}>
+          <p style={{ fontSize: 16, color: S.mid, lineHeight: 1.7, maxWidth: 380, marginBottom: '2rem' }}>
             Eight years of Medicare data. 22,000+ physicians. The due diligence layer that should have existed when you were making this decision.
           </p>
           <div className="landing-hero-actions">
-            <Link href="https://atlas.matchmed.app" style={{ fontSize: 14, fontWeight: 500, color: S.canvas, background: S.teal, borderRadius: 3, padding: '11px 24px' }}>
-              Explore practices
-            </Link>
-            <Link href="#how-it-works" style={{ fontSize: 13, color: S.mid, display: 'flex', alignItems: 'center', gap: 6 }}>
+            <PublicSearchCombobox />
+            <Link href="#how-it-works" style={{ fontSize: 13, color: S.mid, display: 'inline-flex', alignItems: 'center', gap: 6 }}>
               See how it works
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" />
@@ -171,7 +170,7 @@ function Hero() {
             </Link>
           </div>
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <div className="landing-hero-stats" style={{ display: 'flex', flexDirection: 'column' }}>
           {HERO_STATS.map((stat, i) => (
             <div key={i} style={{ padding: '1.5rem 0', borderTop: S.hairline, ...(i === HERO_STATS.length - 1 ? { borderBottom: S.hairline } : {}) }}>
               <div className="landing-hero-stat-number" style={{ fontFamily: 'var(--font-serif)', fontSize: 44, fontWeight: 400, color: S.ink, letterSpacing: -1.5, lineHeight: 1, marginBottom: 4 }}>
