@@ -25,8 +25,8 @@ const TICKER_ITEMS = [
 ]
 
 const HERO_STATS = [
-  { number: '22,000+', label: 'ophthalmologists tracked\nacross the full US workforce' },
-  { number: '6,400+',  label: 'practices profiled with\nlongitudinal tenure data' },
+  { number: '22,300+', label: 'ophthalmologists tracked\nacross the full US workforce' },
+  { number: '6,700+',  label: 'practices profiled with\nlongitudinal tenure data' },
   { number: '8 yrs',   label: 'of longitudinal data\nunderlying every profile' },
 ]
 
