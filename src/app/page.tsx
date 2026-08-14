@@ -6,6 +6,7 @@ import QuoteCarousel from './QuoteCarousel'
 import FAQAccordion from './FAQAccordion'
 import Nav from './Nav'
 import PublicSearchCombobox from '@/components/PublicSearchCombobox'
+import AtlasLink from '@/components/AtlasLink'
 import './landing.css'
 
 export const metadata: Metadata = {
@@ -310,9 +311,9 @@ function CTASection() {
           your first <em style={{ fontStyle: 'italic', color: '#9DB6B0' }}>site visit.</em>
         </h2>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '1rem', flexShrink: 0 }}>
-          <Link href="https://atlas.matchmed.app" style={{ fontSize: 15, fontWeight: 500, color: '#1C4A45', background: '#F7F6F2', borderRadius: 3, padding: '13px 28px' }}>
+          <AtlasLink style={{ fontSize: 15, fontWeight: 500, color: '#1C4A45', background: '#F7F6F2', borderRadius: 3, padding: '13px 28px' }}>
             Explore Atlas
-          </Link>
+          </AtlasLink>
           <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', lineHeight: 1.6 }}>
             Free to browse. No subscription required to view practice profiles.
           </p>

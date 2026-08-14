@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import AtlasLink from '@/components/AtlasLink'
 
 const S = {
   hairline: '1px solid rgba(20,18,16,0.10)',
@@ -69,12 +70,11 @@ export default function Nav() {
                 {label}
               </Link>
             ))}
-            <Link
-              href="https://atlas.matchmed.app"
+            <AtlasLink
               style={{ fontSize: 13, fontWeight: 500, color: S.canvas, background: S.ink, borderRadius: 3, padding: '8px 18px' }}
             >
               Open Atlas
-            </Link>
+            </AtlasLink>
           </div>
           <button
             type="button"
@@ -101,9 +101,9 @@ export default function Nav() {
             {label}
           </Link>
         ))}
-        <Link href="https://atlas.matchmed.app" onClick={closeMenu}>
+        <AtlasLink onClick={closeMenu}>
           Open Atlas
-        </Link>
+        </AtlasLink>
       </div>
     </>
   )
