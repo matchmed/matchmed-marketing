@@ -8,8 +8,8 @@ const FAQS = [
     a: 'Yes. Every practice profile and physician record on Atlas is derived from Medicare Part B data published annually by the federal government. It has always been public. We built the infrastructure to make it searchable and useful.',
   },
   {
-    q: 'Can practices manipulate their score?',
-    a: 'No. Scores are calculated entirely from federal Medicare billing records. Practices have no ability to edit, remove, or influence what appears in that data. A recruiter telling you a practice is great does not change what the data shows.',
+    q: 'Can practices manipulate their Retention Index?',
+    a: 'No. The Retention Index is calculated entirely from federal Medicare billing records. Practices have no ability to edit, remove, or influence what appears in that data. A recruiter telling you a practice is great does not change what the data shows.',
   },
   {
     q: 'How current is the data?',
