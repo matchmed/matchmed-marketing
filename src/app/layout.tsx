@@ -1,4 +1,4 @@
-// src/app/layout.tsx — updated with Cormorant Garamond added
+// src/app/layout.tsx - updated with Cormorant Garamond added
 
 import type { Metadata } from 'next'
 import { Cormorant_Garamond, Inter } from 'next/font/google'
@@ -19,9 +19,9 @@ const sans = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Atlas by MatchMed — Ophthalmology Workforce Intelligence',
+  title: 'Atlas by MatchMed: Ophthalmology Workforce Intelligence',
   description:
-    'Eight years of Medicare data covering 22,000+ physicians and 6,400+ practices. Know a practice before you commit to it.',
+    'Eight years of Medicare data covering 22,600+ ophthalmologists and 6,700+ practices. Know a practice before you commit to it.',
   openGraph: {
     title: 'Atlas by MatchMed',
     description: 'Ophthalmology workforce intelligence built on CMS Medicare data.',

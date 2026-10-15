@@ -19,6 +19,30 @@ const NAV_LINKS = [
   ['Methodology', '/methodology'],
 ] as const
 
+const EMPLOYERS_URL = 'https://employers.matchmed.app'
+
+const physicianButtonStyle = {
+  fontSize: 13,
+  fontWeight: 500,
+  color: S.canvas,
+  background: S.ink,
+  border: '1px solid #141210',
+  borderRadius: 3,
+  padding: '8px 18px',
+  whiteSpace: 'nowrap' as const,
+}
+
+const practiceButtonStyle = {
+  fontSize: 13,
+  fontWeight: 500,
+  color: S.ink,
+  background: 'transparent',
+  border: '1px solid rgba(20,18,16,0.35)',
+  borderRadius: 3,
+  padding: '8px 18px',
+  whiteSpace: 'nowrap' as const,
+}
+
 function NavLogo() {
   return (
     <Link href="/" className="landing-nav-logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 20 }}>
@@ -70,11 +94,14 @@ export default function Nav() {
                 {label}
               </Link>
             ))}
-            <AtlasLink
-              style={{ fontSize: 13, fontWeight: 500, color: S.canvas, background: S.ink, borderRadius: 3, padding: '8px 18px' }}
-            >
-              Open Atlas
-            </AtlasLink>
+            <div className="landing-nav-actions">
+              <AtlasLink className="landing-nav-cta" style={physicianButtonStyle}>
+                For Physicians
+              </AtlasLink>
+              <a className="landing-nav-cta landing-nav-cta-outline" href={EMPLOYERS_URL} style={practiceButtonStyle}>
+                For Practices
+              </a>
+            </div>
           </div>
           <button
             type="button"
@@ -101,9 +128,14 @@ export default function Nav() {
             {label}
           </Link>
         ))}
-        <AtlasLink onClick={closeMenu}>
-          Open Atlas
-        </AtlasLink>
+        <div className="landing-nav-mobile-actions">
+          <AtlasLink className="landing-nav-cta" style={physicianButtonStyle} onClick={closeMenu}>
+            For Physicians
+          </AtlasLink>
+          <a className="landing-nav-cta landing-nav-cta-outline" href={EMPLOYERS_URL} style={practiceButtonStyle} onClick={closeMenu}>
+            For Practices
+          </a>
+        </div>
       </div>
     </>
   )
