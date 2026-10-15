@@ -10,9 +10,9 @@ import AtlasLink from '@/components/AtlasLink'
 import './landing.css'
 
 export const metadata: Metadata = {
-  title: 'Atlas by MatchMed — Ophthalmology Workforce Intelligence',
+  title: 'Atlas by MatchMed: Ophthalmology Workforce Intelligence',
   description:
-    'Eight years of Medicare data covering 22,000+ physicians and 6,400+ practices. Know a practice before you commit to it.',
+    'Eight years of Medicare data covering 22,600+ ophthalmologists and 6,700+ practices. Know a practice before you commit to it.',
 }
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
@@ -26,7 +26,7 @@ const TICKER_ITEMS = [
 ]
 
 const HERO_STATS = [
-  { number: '22,300+', label: 'ophthalmologists tracked\nacross the full US workforce' },
+  { number: '22,600+', label: 'ophthalmologists tracked\nacross the full US workforce' },
   { number: '6,700+',  label: 'practices profiled with\nlongitudinal tenure data' },
   { number: '8 yrs',   label: 'of longitudinal data\nunderlying every profile' },
 ]
@@ -159,7 +159,7 @@ function Hero() {
             to it.
           </h1>
           <p style={{ fontSize: 16, color: S.mid, lineHeight: 1.7, maxWidth: 380, marginBottom: '2rem' }}>
-            Eight years of Medicare data. 22,000+ physicians. The due diligence layer that should have existed when you were making this decision.
+            Eight years of Medicare data. 22,600+ ophthalmologists. The due diligence layer that should have existed when you were making this decision.
           </p>
           <div className="landing-hero-actions">
             <PublicSearchCombobox />
@@ -301,6 +301,29 @@ function HowItWorksSection() {
   )
 }
 
+function PracticesSection() {
+  return (
+    <section style={{ borderBottom: S.hairline, background: S.canvas }}>
+      <div className="landing-section-pad landing-cta-inner">
+        <div style={{ maxWidth: 560 }}>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 400, letterSpacing: -0.5, lineHeight: 1.15, color: S.ink, marginBottom: '1rem' }}>
+            Hiring? Physicians are already researching your practice.
+          </h2>
+          <p style={{ fontSize: 15, color: S.mid, lineHeight: 1.75, margin: 0 }}>
+            Claim your free profile to correct your information, post openings, and talk to candidates directly, without recruiter fees.
+          </p>
+        </div>
+        <a
+          href="https://employers.matchmed.app"
+          style={{ fontSize: 15, fontWeight: 500, color: S.canvas, background: S.ink, borderRadius: 3, padding: '13px 28px', flexShrink: 0, display: 'inline-block' }}
+        >
+          Claim your practice
+        </a>
+      </div>
+    </section>
+  )
+}
+
 function CTASection() {
   const darkBorder = '1px solid rgba(255,255,255,0.1)'
   return (
@@ -314,6 +337,12 @@ function CTASection() {
           <AtlasLink style={{ fontSize: 15, fontWeight: 500, color: '#1C4A45', background: '#F7F6F2', borderRadius: 3, padding: '13px 28px' }}>
             Explore Atlas
           </AtlasLink>
+          <a
+            href="https://employers.matchmed.app"
+            style={{ fontSize: 13, color: 'rgba(255,255,255,0.8)', textDecoration: 'underline', textUnderlineOffset: 3 }}
+          >
+            Recruiting? Claim your practice.
+          </a>
           <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', lineHeight: 1.6 }}>
             Free to browse. No subscription required to view practice profiles.
           </p>
@@ -357,6 +386,7 @@ export default function LandingPage() {
       <QuoteCarousel />
       <HowItWorksSection />
       <FAQAccordion />
+      <PracticesSection />
       <CTASection />
       <Footer />
     </div>
