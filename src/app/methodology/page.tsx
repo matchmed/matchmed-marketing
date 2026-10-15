@@ -64,13 +64,13 @@ export default function MethodologyPage() {
           Scoring methodology
         </h1>
         <p style={{ fontSize: 15, color: S.mid, lineHeight: 1.7, marginBottom: '3rem' }}>
-          Every number on Atlas is derived from publicly available government data. No surveys, no self-reporting, no recruiter claims. Here's exactly how we calculate what you see.
+          Every number on Atlas is derived from publicly available government data. No surveys, no self-reporting, no recruiter claims. Here&apos;s exactly how we calculate what you see.
         </p>
 
         <SectionLabel>Data source</SectionLabel>
         <div style={{ borderLeft: '2px solid #1C4A45', paddingLeft: '1.25rem', marginBottom: '2rem' }}>
           <p style={{ fontSize: 14, color: S.mid, lineHeight: 1.7, margin: 0 }}>
-            <strong style={{ color: S.ink }}>Medicare Part B Provider Data, <a href="https://data.cms.gov/" target="_blank" rel="noopener" style={{ color: S.teal, textDecoration: 'none' }}>Centers for Medicare &amp; Medicaid Services (CMS)</a>.</strong> This dataset captures physician-practice affiliations across annual snapshots. These measures are calculated from 2019 onwards, using the complete longitudinal record of every physician who has appeared on a practice's Medicare roster. No proprietary, self-reported, or third-party data is used. Practices cannot edit, remove, or influence what appears in this data.
+            <strong style={{ color: S.ink }}>Medicare Part B Provider Data, <a href="https://data.cms.gov/" target="_blank" rel="noopener" style={{ color: S.teal, textDecoration: 'none' }}>Centers for Medicare &amp; Medicaid Services (CMS)</a>.</strong> This dataset captures physician-practice affiliations across annual snapshots. These measures are calculated from 2019 onwards, using the complete longitudinal record of every physician who has appeared on a practice&apos;s Medicare roster. No proprietary, self-reported, or third-party data is used. Practices cannot edit, remove, or influence what appears in this data.
           </p>
           <p style={{ fontSize: 12, color: S.mid, lineHeight: 1.6, marginTop: '0.75rem', opacity: 0.7 }}>
             Atlas is not affiliated with, endorsed by, or sponsored by the Centers for Medicare &amp; Medicaid Services or any other federal agency.
