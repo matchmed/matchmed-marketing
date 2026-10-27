@@ -9,7 +9,7 @@ export type PublicSearchPractice = {
   practice_name: string | null
   city: string | null
   state: string | null
-  location_count: number | null
+  doctor_count: number | null
 }
 
 export type PublicSearchPhysician = {
@@ -113,7 +113,7 @@ export async function publicSearch(
           practice_name: str(r.practice_name),
           city: str(r.city),
           state: str(r.state),
-          location_count: num(r.location_count),
+          doctor_count: num(r.doctor_count),
         } satisfies PublicSearchPractice
       })
       .filter((row): row is PublicSearchPractice => row !== null)

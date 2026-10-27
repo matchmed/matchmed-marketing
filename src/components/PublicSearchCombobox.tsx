@@ -229,8 +229,8 @@ export default function PublicSearchCombobox() {
                         {p.practice_name || 'Practice'}
                       </span>
                       <span className="public-search-option-meta">
-                        {[loc, p.location_count && p.location_count > 1
-                          ? `${p.location_count} locations`
+                        {[loc, p.doctor_count && p.doctor_count > 0
+                          ? `${p.doctor_count} doctor${p.doctor_count === 1 ? '' : 's'}`
                           : null]
                           .filter(Boolean)
                           .join(' · ')}
